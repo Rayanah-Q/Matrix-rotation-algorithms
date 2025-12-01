@@ -2,9 +2,9 @@
 #include "timer.h"
 using namespace std;
 
-const int MAX = 400; // أكبر حجم للمصفوفة ممكن تجربينه
+const int MAX = 400; //Maximum matrix size
 
-// دالة لطباعة المصفوفة (اختيارية)
+// Function to print the matrix.
 void printMatrix(int a[][MAX], int n) {
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
@@ -42,7 +42,7 @@ void rotateOptimized(int a[][MAX], int n) {
 
 // =================== Main Function ===================
 int main() {
-    int sizes[] = { 10, 50, 100, 200, 300, 400 };
+    int sizes[] = { 10, 50, 100, 200, 300, 400 }; //Different matrix sizes to measure the performance on
 
     cout << "==============================================\n";
     cout << "   Matrix Rotation Time Measurement (µs)\n";
@@ -52,9 +52,9 @@ int main() {
 
     for (int s = 0; s < 6; s++) {
         int n = sizes[s];
-        int a[MAX][MAX];
+        int a[MAX][MAX]; //Static matrix with maximum size(n*n)
 
-        // تعبئة المصفوفة تلقائيًا
+        //Automatically fill the matrix
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 a[i][j] = 1;  // أو rand() % 100
@@ -64,7 +64,7 @@ int main() {
         Timer t;
         t.start();
 
-        // نكرر العملية أكثر من مرة عشان الزمن يصير واضح
+        //Repeat the operation multiple times to get clearer timing
         for (int repeat = 0; repeat < 500; repeat++) {
             rotateOptimized(a, n);
         }
