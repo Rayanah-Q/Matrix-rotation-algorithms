@@ -37,7 +37,7 @@ void rotateOptimized(int a[][MAX], int n) {
 }
 // =================== Main Function ===================
 int main() {
-    int sizes[] = { 10, 50, 100, 200, 300, 400 }; //Different matrix sizes to measure the performance on
+    int sizes[] = { 10, 50, 100, 200, 300, 400 }; //Different matrix sizes to measure the performance
 
     cout << "==============================================\n";
     cout << "   Matrix Rotation Time Measurement (µs)\n";
