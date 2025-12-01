@@ -13,7 +13,6 @@ void printMatrix(int a[][MAX], int n) {
         cout << "\n";
     }
 }
-
 // =================== Optimized Rotation ===================
 void rotateOptimized(int a[][MAX], int n) {
     // 1. Transpose
@@ -24,7 +23,6 @@ void rotateOptimized(int a[][MAX], int n) {
             a[j][i] = temp;
         }
     }
-
     // 2. Reverse each row
     for (int i = 0; i < n; i++) {
         int l = 0, r = n - 1;
@@ -37,7 +35,6 @@ void rotateOptimized(int a[][MAX], int n) {
         }
     }
 }
-
 // =================== Main Function ===================
 int main() {
     int sizes[] = { 10, 50, 100, 200, 300, 400 }; //Different matrix sizes to measure the performance on
@@ -66,13 +63,11 @@ int main() {
         for (int repeat = 0; repeat < 500; repeat++) {
             rotateOptimized(a, n);
         }
-
         t.stop();
 
         double duration = t.getDurationMicro();
         cout << n << "x" << n << "\t" << duration << "\n";
     }
-
     cout << "==============================================\n";
     return 0;
 }
