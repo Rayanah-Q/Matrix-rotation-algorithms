@@ -30,19 +30,19 @@ without using extra space for another matrix.
 ## Pseudocode
 
 ```
-    FUNCTION rotateOptimized(matrix, n)
-        // Transpose the matrix
-        FOR i ← 0 to n-1
-            FOR j ← i+1 to n-1
-                SWAP matrix[i][j] and matrix[j][i]
-        // Reverse each row
-        FOR i ← 0 to n-1
-            left ← 0
-            right ← n-1
-            WHILE left < right
-                SWAP matrix[i][left] and matrix[i][right]
-                INCREMENT left
-                DECREMENT right
+1    FUNCTION rotateOptimized(matrix, n)
+2        // Transpose the matrix
+3        FOR i ← 0 to n-1
+4            FOR j ← i+1 to n-1
+5                SWAP matrix[i][j] and matrix[j][i]
+6        // Reverse each row
+7        FOR i ← 0 to n-1
+8            left ← 0
+9            right ← n-1
+10           WHILE left < right
+11               SWAP matrix[i][left] and matrix[i][right]
+12               INCREMENT left
+13               DECREMENT right
 
 ```
 ---
